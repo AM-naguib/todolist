@@ -74,7 +74,7 @@ $result = mysqli_query($conn, $sql);
                                 ?>
                             </td>
                             <td>
-                                <?php echo $row["created_at"] ?>
+                                <?php echo $row["careated_at"] ?>
                             </td>
                             <td>
                                 <?php echo $row["updated_at"] ?>

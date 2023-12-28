@@ -3,7 +3,6 @@ let EditBtn = document.querySelectorAll("#editBtn")
 let exitBtn = document.querySelector('.fa-x')
 let editInput = document.querySelector("#addtask")
 let inputId = document.querySelector('#taskid')
-
 EditBtn.forEach(item => {
     item.addEventListener("click", function () {
         let content = item.parentElement.parentElement.children[1].textContent.trim()

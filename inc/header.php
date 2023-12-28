@@ -22,16 +22,22 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse d-flex align-items-center" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="addtodo.php">add todos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="todos.php">all todos</a>
-                    </li>
-
-                </ul>
+                
                 <?php if (isset($_SESSION['user'])): ?>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="addtodo.php">add todos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="todos.php">all todos</a>
+                        </li>
+                        <?php if (isset($_SESSION['user']['role']) && $_SESSION['user']['role'] == 1): ?>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="http://127.0.0.1/my%20projects/todolist/admin/admin_panel.php">ADMIN
+                                    PANEL</a>
+                            </li>
+                        <?php endif; ?>
+                    </ul>
                     <div class="user_info d-flex align-items-center gap-5 justify-content-center">
                         <p class="m-0">Hi,
                             <?php echo $_SESSION['user']['name'] ?>
@@ -40,8 +46,8 @@
                     </div>
                 <?php else: ?>
                     <div class="login-reg gap-2">
-                        <a class="btn btn-primary" href="#">Login</a>
-                        <a class="btn btn-primary" href="#">Sign up</a>
+                        <a class="btn btn-primary" href="login.php">Login</a>
+                        <a class="btn btn-primary" href="signup.php">Sign up</a>
                     </div>
                 <?php endif; ?>
             </div>

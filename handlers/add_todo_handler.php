@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
 
     if(empty($erorrs)){
-        $sql = "INSERT INTO todos (todo, user_id, status, created_at) VALUES ('$task','$user_id','0','$date')";
+        $sql = "INSERT INTO todos (todo, user_id, status, careated_at) VALUES ('$task','$user_id','0','$date')";
         $result = mysqli_query($conn,$sql);
         if(!$result){
             $_SESSION["erorrs"] = ["task not add erorr in add"];
