@@ -26,14 +26,14 @@
                 <?php if (isset($_SESSION['user'])): ?>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="addtodo.php">add todos</a>
+                            <a class="nav-link active" aria-current="page" href="http://127.0.0.1/my-projects/todolist/addtodo.php">add todos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="todos.php">all todos</a>
+                            <a class="nav-link active" aria-current="page" href="http://127.0.0.1/my-projects/todolist/todos.php">all todos</a>
                         </li>
                         <?php if (isset($_SESSION['user']['role']) && $_SESSION['user']['role'] == 1): ?>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="http://127.0.0.1/my%20projects/todolist/admin/admin_panel.php">ADMIN
+                                <a class="nav-link active" aria-current="page" href="http://127.0.0.1/my-projects/todolist/admin/admin_panel.php">ADMIN
                                     PANEL</a>
                             </li>
                         <?php endif; ?>
@@ -42,7 +42,7 @@
                         <p class="m-0">Hi,
                             <?php echo $_SESSION['user']['name'] ?>
                         </p>
-                        <p class="m-0"><a href="handlers/logout.php" class="btn btn-primary">Logout</a></p>
+                        <p class="m-0"><a href="http://127.0.0.1/my-projects/todolist/handlers/logout.php" class="btn btn-primary">Logout</a></p>
                     </div>
                 <?php else: ?>
                     <div class="login-reg gap-2">
